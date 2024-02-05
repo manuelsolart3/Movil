@@ -2,6 +2,7 @@ package com.fisrtproject.clasebd
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.fisrtproject.clasebd.model.ManagerBd
 
 class MainActivity : AppCompatActivity() {
@@ -12,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         //Instanciamos la clase bdHelper
         val manager = ManagerBd(this)
        manager.insertData()
+        Toast.makeText(this, "base de datos creada ", Toast.LENGTH_SHORT)
 
 
 
