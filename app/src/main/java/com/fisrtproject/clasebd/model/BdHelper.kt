@@ -12,11 +12,15 @@ class BdHelper(
     override fun onCreate(db: SQLiteDatabase?) {
 
         db?.execSQL(Constans.Tabla)
+        db?.execSQL(Constans.Tabla2 )
 
     }
 
-    override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
-        TODO("Not yet implemented")
+    override fun onUpgrade(db: SQLiteDatabase?, p1: Int, p2: Int) {
+
+        //Actualiza la base de datos
+        db?.execSQL("DROP TABLE IF EXISTS ciudad")
+        onCreate(db)
     }
 
 }

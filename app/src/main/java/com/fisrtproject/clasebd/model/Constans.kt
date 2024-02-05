@@ -8,6 +8,7 @@ class Constans {
 
         //le asignamos la sentencia sql
         const val Tabla = "Create table ciudad (cod init, nombre  text)"
+        const val Tabla2 = "Create table usuario (cod init, nombre  text)"
 
 
     } }
